@@ -18,14 +18,13 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch assessment site
+      - name: Checkout source archive
+        uses: actions/checkout@v4
+      - name: Unpack assessment site
         run: |
           set -euo pipefail
           mkdir -p _site
-          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent --execute robots=off --directory-prefix=/tmp/vectorshift-source https://darsh-vectorshift-pm.darsh2210.chatgpt.site/
-          cp -R /tmp/vectorshift-source/darsh-vectorshift-pm.darsh2210.chatgpt.site/. _site/
-          find _site -type f -name '*.html' -print0 | xargs -0 sed -i 's#https://darsh-vectorshift-pm.darsh2210.chatgpt.site##g'
-          find _site -type f \( -name '*.html' -o -name '*.js' -o -name '*.css' \) -print0 | xargs -0 sed -i 's#\.\./BuilderView/#./BuilderView/#g'
+          unzip -q vectorshift-site-source.zip -d _site
           touch _site/.nojekyll
       - name: Publish files to gh-pages branch
         run: |
