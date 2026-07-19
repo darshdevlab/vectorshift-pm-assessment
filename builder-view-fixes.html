@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Builder View Fixes</title>
+    <link rel="stylesheet" href="./overview.css" />
+  </head>
+  <body class="about-body fixes-body">
+    <main class="about-shell">
+      <section class="about-layout fixes-layout">
+        <aside class="about-sidebar build-sidebar fixes-sidebar">
+          <div class="sidebar-heading">
+            <a class="back-link" href="./index.html" aria-label="Back to home"><span aria-hidden="true">←</span></a>
+            <strong><span>BUILDER</span> Fixes</strong>
+          </div>
+
+          <p>Problem Type</p>
+          <nav class="about-tabs fix-type-tabs" aria-label="Problem type">
+            <button class="about-tab active" type="button" data-fix-type="builder">
+              <span>01</span>
+              Builder View Problems
+            </button>
+            <button class="about-tab" type="button" data-fix-type="userflow">
+              <span>02</span>
+              User Flow Problems
+            </button>
+          </nav>
+
+          <div class="subsection-wrap">
+            <p>Ranked Screens</p>
+            <nav class="fix-issue-list" id="fixIssueList" aria-label="Ranked issue screens"></nav>
+          </div>
+        </aside>
+
+        <section class="about-stage fixes-stage" id="fixStage" aria-live="polite"></section>
+      </section>
+    </main>
+
+    <script src="./builder-view-fixes.js"></script>
+  </body>
+</html>

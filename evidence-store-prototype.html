@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guided Evidence Store Prototype</title>
+    <link rel="stylesheet" href="./evidence-store-prototype.css" />
+  </head>
+  <body>
+    <main class="vs-shell">
+      <header class="vs-topbar">
+        <div class="breadcrumbs">
+          <span class="small-icon">◧</span>
+          <span>Projects</span>
+          <span>/</span>
+          <strong>VectorShift Deal Intelligence Work...</strong>
+          <span>/</span>
+          <strong>New Workflow</strong>
+        </div>
+        <nav class="view-tabs" aria-label="Builder views">
+          <button class="active" type="button">Workflow</button>
+          <button type="button">Interface</button>
+          <button type="button">Analytics</button>
+          <button type="button">Manager</button>
+          <button type="button">Playground</button>
+        </nav>
+        <div class="top-actions">
+          <button type="button">Ask Assistant</button>
+          <button type="button">↶</button>
+          <button type="button">↷</button>
+          <button type="button">Versions</button>
+          <button type="button">Share</button>
+          <button class="run" type="button" data-run-button>Run</button>
+          <button class="save" type="button">Save</button>
+        </div>
+      </header>
+
+      <section class="builder-grid">
+        <section class="main-builder">
+          <div class="node-palette">
+            <div class="palette-search">
+              <span>⌕</span>
+              <input id="paletteSearch" value="Evidence Store" aria-label="Search nodes" />
+              <button type="button">×</button>
+            </div>
+            <nav class="category-tabs" aria-label="Node categories">
+              <button type="button">Start</button>
+              <button type="button">VectorShift</button>
+              <button type="button">Knowledge</button>
+              <button type="button">AI</button>
+              <button type="button">Integrations</button>
+              <button type="button">Logic</button>
+              <button class="active" type="button">Data</button>
+              <button type="button">Chat</button>
+            </nav>
+            <div class="palette-results" id="paletteResults"></div>
+          </div>
+
+          <div class="canvas-region">
+            <button class="close-palette" type="button">×</button>
+            <div class="canvas" id="canvas"></div>
+            <div class="mini-map">
+              <div></div>
+              <span>100%</span>
+              <button type="button">+</button>
+              <button type="button">−</button>
+              <button type="button">□</button>
+            </div>
+            <section class="trace-panel" id="tracePanel"></section>
+            <div class="workflow-tabs">
+              <button class="active" type="button">⌘ New Workflow</button>
+              <button type="button">☰</button>
+              <button type="button">＋</button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="config-panel" id="configPanel"></aside>
+      </section>
+
+      <div class="flow-control">
+        <div>
+          <strong id="flowTitle">Blocked Storage State</strong>
+          <span id="flowSubtitle">Shows the current issue clearly when table/storage creation is blocked.</span>
+        </div>
+        <nav id="stepList" aria-label="Prototype screens"></nav>
+        <button class="primary" type="button" id="nextAction">Set up Evidence Store</button>
+      </div>
+
+      <div class="overlay-layer" id="overlayLayer"></div>
+    </main>
+
+    <script src="./evidence-store-prototype.js"></script>
+  </body>
+</html>

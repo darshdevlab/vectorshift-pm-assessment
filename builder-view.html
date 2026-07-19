@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Builder View</title>
+    <link rel="stylesheet" href="./overview.css" />
+  </head>
+  <body class="about-body">
+    <main class="about-shell">
+      <section class="about-layout">
+        <aside class="about-sidebar builder-sidebar">
+          <div class="sidebar-heading">
+            <a class="back-link" href="./index.html" aria-label="Back to home"><span aria-hidden="true">←</span></a>
+            <strong><span>BUILDER</span> View</strong>
+          </div>
+          <p>Options</p>
+          <nav class="about-tabs" aria-label="Builder view sections">
+            <button class="about-tab active" type="button" data-section="builder">
+              <span>01</span>
+              Explore the builder view
+            </button>
+            <button class="about-tab" type="button" data-section="userflow">
+              <span>02</span>
+              Explore user flow
+            </button>
+          </nav>
+        </aside>
+
+        <section class="about-stage" id="builderStage" aria-live="polite"></section>
+      </section>
+    </main>
+
+    <script src="./builder-view.js"></script>
+  </body>
+</html>

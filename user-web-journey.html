@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Web Journey</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div aria-hidden="true"></div>
+      <button class="tour-start" id="takeTour" type="button">Take Tour</button>
+      <div class="toolbar" aria-label="Flow controls">
+        <button id="zoomOut" type="button" title="Zoom out">-</button>
+        <button id="zoomIn" type="button" title="Zoom in">+</button>
+        <button id="fitView" type="button">Fit</button>
+        <button id="resetView" type="button">Reset</button>
+      </div>
+    </header>
+
+    <main class="workspace" id="workspace">
+      <div class="viewport" id="viewport">
+        <section class="tour-card" id="tourCard" aria-live="polite" hidden>
+          <div class="tour-card-top">
+            <span id="tourStep">Step 1</span>
+            <button id="closeTour" type="button" aria-label="Close tour">Close</button>
+          </div>
+          <h2 id="tourTitle">Screen title</h2>
+          <p id="tourPurpose">Screen purpose appears here.</p>
+          <p class="tour-problem" id="tourProblem"></p>
+          <div class="tour-actions">
+            <button id="prevTour" type="button">Previous</button>
+            <button id="nextTour" type="button">Next</button>
+          </div>
+        </section>
+        <div class="canvas" id="canvas">
+          <svg class="links" id="links" aria-hidden="true"></svg>
+          <section class="nodes" id="nodes" aria-label="Screen flow map"></section>
+        </div>
+      </div>
+      <aside class="details" id="details">
+        <section class="issue-dock" aria-label="Issue screens">
+          <div class="issue-dock-header">
+            <h3>Issue Screen</h3>
+          </div>
+          <div class="issue-nav-list" id="issueNav"></div>
+          <div class="issue-detail" id="issueDetail">
+            <strong>Select an issue screen</strong>
+            <p>The problem note will appear here.</p>
+          </div>
+        </section>
+        <div class="group-nav" aria-label="Screen group">
+          <h3>Screen Group</h3>
+          <div class="group-nav-list" id="groupNav"></div>
+        </div>
+        <section class="selected-detail" aria-label="About screen">
+          <span class="eyebrow" id="detailEyebrow">About Screen</span>
+          <h2 id="detailTitle">Click a screen</h2>
+          <p id="detailText">The selected screen summary will appear here.</p>
+        </section>
+        <div class="legend" aria-label="Line meaning">
+          <h3>Line Meaning</h3>
+          <div><span class="legend-line main"></span>Main user flow</div>
+          <div><span class="legend-line branch"></span>Secondary branch</div>
+          <div><span class="legend-line issue"></span>Problem/error path</div>
+          <div><span class="legend-box"></span>Dotted box = grouped screens</div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
