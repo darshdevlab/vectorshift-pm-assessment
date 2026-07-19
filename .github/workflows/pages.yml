@@ -24,7 +24,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site
-          unzip -q vectorshift-site-source.zip -d _site
+          unzip -q vectorshift-site-source-v2.zip -d _site
           touch _site/.nojekyll
       - name: Publish files to gh-pages branch
         run: |
